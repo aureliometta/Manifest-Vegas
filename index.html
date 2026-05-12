@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manifest Vegas 2025 🎰</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F0D080;
+    --neon-pink: #FF2D6B;
+    --neon-blue: #00D4FF;
+    --dark: #0A0A0F;
+    --dark-2: #111118;
+    --dark-3: #1A1A24;
+    --card: #16161F;
+    --text: #E8E4D9;
+    --muted: #7A7870;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(201,168,76,0.18) 0%, transparent 65%),
+      radial-gradient(ellipse 50% 40% at 20% 30%, rgba(255,45,107,0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(0,212,255,0.08) 0%, transparent 60%),
+      var(--dark);
+    z-index: 0;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  .eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 16vw, 160px);
+    line-height: 0.88;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, #8B6A1F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .hero-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 6vw, 56px);
+    letter-spacing: 8px;
+    color: var(--text);
+    opacity: 0.5;
+    margin-bottom: 40px;
+  }
+
+  .hero-dates {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 2px;
+    padding: 12px 28px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    max-width: 420px;
+    line-height: 1.7;
+  }
+
+  .hero-tagline strong {
+    color: var(--text);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 1;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* SECTION LAYOUT */
+  .section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201,168,76,0.2);
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 8vw, 72px);
+    letter-spacing: 3px;
+    color: var(--text);
+    margin-bottom: 48px;
+    line-height: 1;
+  }
+
+  /* COVERED BANNER */
+  .covered-banner {
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.06));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    padding: 24px 32px;
+    margin-bottom: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .covered-banner .label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-right: 4px;
+  }
+
+  .covered-pill {
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 1px;
+    padding: 4px 14px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: var(--gold-light);
+    text-transform: uppercase;
+  }
+
+  .covered-note {
+    width: 100%;
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* DAY BLOCK */
+  .day-block {
+    margin-bottom: 56px;
+  }
+
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .day-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+
+  .day-name.fri { color: var(--neon-pink); }
+  .day-name.sat { color: var(--gold); }
+  .day-name.sun { color: var(--neon-blue); }
+
+  .day-date {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--dark-3);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .timeline-item.highlight::before {
+    background: var(--gold);
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(201,168,76,0.5);
+  }
+
+  .time-tag {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .timeline-item.highlight .time-tag { color: var(--gold); }
+
+  .event-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .event-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .event-desc a { color: var(--gold); text-decoration: none; }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 1px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .tag-free { background: rgba(0,212,255,0.12); color: var(--neon-blue); border: 1px solid rgba(0,212,255,0.25); }
+  .tag-paid { background: rgba(255,45,107,0.10); color: var(--neon-pink); border: 1px solid rgba(255,45,107,0.25); }
+  .tag-covered { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+  .tag-optional { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid rgba(255,255,255,0.1); }
+
+  .options-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .option-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin: 0 0 64px;
+  }
+
+  /* PACKING */
+  .packing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .pack-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    padding: 24px 20px;
+    transition: border-color 0.2s;
+  }
+
+  .pack-card:hover {
+    border-color: rgba(201,168,76,0.2);
+  }
+
+  .pack-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pack-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pack-list li {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .pack-list li::before {
+    content: '—';
+    color: var(--muted);
+    flex-shrink: 0;
+    font-size: 11px;
+    margin-top: 3px;
+  }
+
+  .pack-list li .note {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  /* NOTES */
+  .notes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 600px) {
+    .notes-grid { grid-template-columns: 1fr; }
+  }
+
+  .note-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    padding: 20px;
+  }
+
+  .note-card.accent {
+    border-color: rgba(201,168,76,0.25);
+    background: rgba(201,168,76,0.05);
+  }
+
+  .note-card.pink {
+    border-color: rgba(255,45,107,0.2);
+    background: rgba(255,45,107,0.04);
+  }
+
+  .note-icon { font-size: 22px; margin-bottom: 10px; }
+
+  .note-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .note-body {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .note-body strong { color: var(--text); font-weight: 500; }
+  .note-body a { color: var(--gold); text-decoration: none; }
+
+  /* LOGISTICS */
+  .logistics-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .logistics-row { grid-template-columns: 1fr; }
+  }
+
+  .logistics-item {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    padding: 20px;
+  }
+
+  .logistics-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .logistics-value {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--dark-2);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 6px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .footer-sub {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-title { animation: fadeUp 0.8s ease both; }
+  .hero-sub { animation: fadeUp 0.8s 0.1s ease both; }
+  .hero-dates { animation: fadeUp 0.8s 0.2s ease both; }
+  .hero-tagline { animation: fadeUp 0.8s 0.3s ease both; }
+  .eyebrow { animation: fadeUp 0.6s ease both; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="eyebrow">UCI Manifest Entrepreneurship Club Presents</div>
+  <div class="hero-title">VEGAS</div>
+  <div class="hero-sub">2025</div>
+  <div class="hero-dates">🎰 May 15 &nbsp;—&nbsp; May 17 &nbsp;•&nbsp; Las Vegas, NV</div>
+  <div class="hero-tagline">
+    <strong>Let's make it count.</strong>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</div>
+
+<!-- LOGISTICS -->
+<div class="section">
+  <div class="section-label">Before You Pack</div>
+  <div class="section-title">The Logistics</div>
+
+  <div class="logistics-row">
+    <div class="logistics-item">
+      <div class="logistics-label">Where We're Staying</div>
+      <div class="logistics-value">Otonomus Hotel Las Vegas<br><span style="font-size:13px;font-weight:300;color:var(--muted)">5050 W Russell Rd, Las Vegas, NV</span></div>
+    </div>
+    <div class="logistics-item">
+      <div class="logistics-label">Dates</div>
+      <div class="logistics-value">Arrive Fri May 15<br><span style="font-size:13px;font-weight:300;color:var(--muted)">Depart Sun May 17 — Check out by 11am</span></div>
+    </div>
+    <div class="logistics-item">
+      <div class="logistics-label">Departure — Most People</div>
+      <div class="logistics-value">🚗 9:00 AM Friday<br><span style="font-size:13px;font-weight:300;color:var(--muted)">Rides listed in the ride sheet</span></div>
+    </div>
+    <div class="logistics-item">
+      <div class="logistics-label">Can't Leave at 9?</div>
+      <div class="logistics-value">One afternoon car available<br><span style="font-size:13px;font-weight:300;color:var(--muted)">Only for non-negotiable conflicts — reach out!</span></div>
+    </div>
+  </div>
+
+  <div class="covered-banner">
+    <span class="covered-label label">Manifest Covers:</span>
+    <span class="covered-pill">Gas (both ways)</span>
+    <span class="covered-pill">Saturday Brunch</span>
+    <span class="covered-pill">All Weekend Alcohol</span>
+    <div class="covered-note">Everything else — dinners, activities, incidentals — is on you. Plan accordingly!</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ITINERARY -->
+<div class="section">
+  <div class="section-label">Full Schedule</div>
+  <div class="section-title">The Itinerary</div>
+
+  <!-- FRIDAY -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-name fri">Friday</div>
+      <div class="day-date">May 15</div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-tag">9:00 AM</div>
+        <div class="event-title">Hit the Road</div>
+        <div class="event-desc">Coordinate carpools from the <strong>ride sheet</strong>. Grab something on the way — In-N-Out, gas station, whatever. ~4 hour drive. See you there.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">1:00 – 2:00 PM</div>
+        <div class="event-title">Check In + Get Situated</div>
+        <div class="event-desc">Drop bags, find your room, take in the hotel. Group photo. The weekend officially starts now.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">3:00 – 6:00 PM</div>
+        <div class="event-title">Choose Your Own Adventure</div>
+        <div class="event-desc">No one is making decisions for you. Pick your poison:</div>
+        <div class="options-list">
+          <div class="option"><span class="option-icon">🎡</span><span><strong>Walk the Strip</strong> — Casino lobby hop. Bellagio Conservatory, Venetian canals, Caesars Forum Shops. The Bellagio Fountains are free every 30 min. Don't skip them. <span class="tag tag-free">Free</span></span></div>
+          <div class="option"><span class="option-icon">🎢</span><span><strong>NY NY Roller Coaster</strong> — Screaming over the Vegas skyline. Classic. ~$25/person. <span class="tag tag-paid">~$25</span></span></div>
+          <div class="option"><span class="option-icon">🏊</span><span><strong>Hotel Pool Hang</strong> — Crack a drink, vibe poolside, recover from the drive. Don't underestimate this option. <span class="tag tag-free">Free</span></span></div>
+          <div class="option"><span class="option-icon">⛳</span><span><strong>Topgolf</strong> — Just off the Strip. Bay pricing = affordable when split. Rooftop pool bar included. <span class="tag tag-optional">Optional</span></span></div>
+        </div>
+      </div>
+      <div class="timeline-item highlight">
+        <div class="time-tag">7:00 – 8:30 PM</div>
+        <div class="event-title">Friday Night Dinner</div>
+        <div class="event-desc">LINQ Promenade — open-air dining right on the Strip. Tons of options at every budget. Great for a big group that wants to split up and regroup. Everyone pays their own. <span class="tag tag-paid">On You</span></div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">9:00 PM – ∞</div>
+        <div class="event-title">Back at the Hotel 🎰</div>
+        <div class="event-desc">Pool going, drinks flowing (on Manifest 🥂), games out, convos running deep. Robot Bar — decision TBD based on the energy. Either way, the night is yours.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-name sat">Saturday</div>
+      <div class="day-date">May 16</div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item highlight">
+        <div class="time-tag">10:00 AM – 12:00 PM</div>
+        <div class="event-title">Brunch at the Hotel <span class="tag tag-covered">Manifest Covers</span></div>
+        <div class="event-desc">Your internal VPs are cheffing it up. Show up hungry. Don't cook, don't clean — just eat.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">1:00 – 3:00 PM</div>
+        <div class="event-title">Escape Room</div>
+        <div class="event-desc">Split into teams and compete. Two great options on the Strip:
+          <br><br><strong>The Escape Game @ Forum Shops (Caesars)</strong> — 5.0 stars, 9,600+ reviews. <br><strong>PanIQ Escape Room + Lounge @ Venetian</strong> — 4.9 stars, cocktail lounge attached, 50% off a 2nd room. 
+          <br><br>Both are bookable in advance — someone will confirm which we're doing. <span class="tag tag-paid">On You</span></div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">3:00 – 6:00 PM</div>
+        <div class="event-title">More Strip Time</div>
+        <div class="event-desc">Keep exploring. Options include:</div>
+        <div class="options-list">
+          <div class="option"><span class="option-icon">🔮</span><span><strong>Museum of Illusions</strong> — trippy, photo-worthy, endlessly entertaining</span></div>
+          <div class="option"><span class="option-icon">🎡</span><span><strong>High Roller Observation Wheel</strong> — the views are insane at sunset</span></div>
+          <div class="option"><span class="option-icon">🦩</span><span><strong>Flamingo Wildlife Habitat</strong> — free, chaotic, surreal</span></div>
+          <div class="option"><span class="option-icon">🎮</span><span><strong>Dave & Buster's</strong> — if you want to go full chaotic</span></div>
+          <div class="option"><span class="option-icon">🎰</span><span><strong>Casino hop</strong> — sometimes the floor IS the activity</span></div>
+          <div class="option"><span class="option-icon">🏊</span><span><strong>Hotel Pool</strong> — reset before dinner, get your pre-game going early <span class="tag tag-free">Free</span></span></div>
+        </div>
+      </div>
+      <div class="timeline-item highlight">
+        <div class="time-tag">6:00 – 8:00 PM</div>
+        <div class="event-title">Saturday Group Dinner — Monzú Italian Oven + Bar 🍝</div>
+        <div class="event-desc">The move. Authentic Italian, great portions, solid prices. This is the big group dinner of the weekend — the whole crew, one table, main event energy. <strong>This is a professional dress night.</strong> Suit or dress if you can. Dress shirt minimum — no excuses. Bring your A-fit. <span class="tag tag-paid">On You</span></div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">9:00 PM – ∞</div>
+        <div class="event-title">Back at the Hotel, Round Two 🥂</div>
+        <div class="event-desc">You already know. Pool, drinks (on Manifest 🥂), games, memories. This is the main event of the whole weekend. Don't hold back.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-name sun">Sunday</div>
+      <div class="day-date">May 17</div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time-tag">10:00 – 11:00 AM</div>
+        <div class="event-title">Pack Up + Check Out ⚠️</div>
+        <div class="event-desc"><strong>Must be out by 11:00 AM.</strong> Set an alarm. Don't be the reason we lose the deposit.</div>
+      </div>
+      <div class="timeline-item highlight">
+        <div class="time-tag">11:00 AM – 12:00 PM</div>
+        <div class="event-title">Hash House A Go Go 🥞</div>
+        <div class="event-desc">The last meal. Absurdly massive portions, legendary chicken & waffles, and the energy of a group that just survived a Vegas weekend. 4.8 stars, 33,000+ reviews. Come hungry. <span class="tag tag-paid">On You</span></div>
+      </div>
+      <div class="timeline-item">
+        <div class="time-tag">1:00 – 5:00 PM</div>
+        <div class="event-title">Drive Home 😔</div>
+        <div class="event-desc">Back to Irvine. Sleep in the car. You earned it.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PACKING LIST -->
+<div class="section">
+  <div class="section-label">What to Bring</div>
+  <div class="section-title">Pack This</div>
+
+  <div class="packing-grid">
+    <div class="pack-card">
+      <div class="pack-card-title">👔 Clothes</div>
+      <ul class="pack-list">
+        <li>Casual day fit <span class="note">(Strip exploring, escape room)</span></li>
+        <li><strong>Going-out fit</strong> <span class="note">Saturday dinner — dress up, bring the heat</span></li>
+        <li>Swimsuit <span class="note">(pool is happening both nights)</span></li>
+        <li>Comfy sleep clothes</li>
+        <li>Change of clothes for Sunday drive</li>
+        <li>Comfortable walking shoes <span class="note">you WILL walk miles on the Strip</span></li>
+      </ul>
+    </div>
+
+    <div class="pack-card">
+      <div class="pack-card-title">☀️ Essentials</div>
+      <ul class="pack-list">
+        <li>Sunscreen <span class="note">Vegas heat is no joke — reapply</span></li>
+        <li>Sunglasses</li>
+        <li>Phone charger + portable battery</li>
+        <li>Headphones</li>
+        <li>Valid ID <span class="note">mandatory — don't forget this</span></li>
+        <li>Cash and/or card</li>
+      </ul>
+    </div>
+
+    <div class="pack-card">
+      <div class="pack-card-title">💊 Wellness</div>
+      <ul class="pack-list">
+        <li>The Plug Drink <span class="note">hangover prevention — highly recommended by your VP 👀</span></li>
+        <li>Water bottle</li>
+        <li>Pain relievers <span class="note">just trust us</span></li>
+        <li>Any personal meds</li>
+        <li>Chapstick <span class="note">desert air is dry</span></li>
+        <li>Face wash + skincare basics</li>
+      </ul>
+    </div>
+
+    <div class="pack-card">
+      <div class="pack-card-title">🎒 Nice to Have</div>
+      <ul class="pack-list">
+        <li>Crossbody bag or fanny pack <span class="note">keep your hands free on the Strip</span></li>
+        <li>Light layer / jacket <span class="note">casinos are freezing</span></li>
+        <li>Earplugs <span class="note">20 people + one hotel — just saying</span></li>
+        <li>Small snacks for the drive</li>
+        <li>Venmo ready <span class="note">you'll be splitting things</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- NOTES -->
+<div class="section">
+  <div class="section-label">Read This</div>
+  <div class="section-title">Good to Know</div>
+
+  <div class="notes-grid">
+    <div class="note-card accent">
+      <div class="note-icon">🥂</div>
+      <div class="note-title">What Manifest Covers</div>
+      <div class="note-body">Gas for the drive, all alcohol over the weekend, and Saturday brunch. That's it — and it's a lot. Dinners, activities, and everything else are on you. Budget accordingly before you leave Irvine.</div>
+    </div>
+    <div class="note-card">
+      <div class="note-icon">🚗</div>
+      <div class="note-title">Rides</div>
+      <div class="note-body">All carpools are organized in the <strong>ride sheet</strong>. Most people depart Friday at <strong>9:00 AM sharp</strong> — if you have a non-negotiable conflict, there is <strong>one afternoon car</strong> available. Reach out in the group chat to claim a spot.</div>
+    </div>
+    <div class="note-card">
+      <div class="note-icon">🎰</div>
+      <div class="note-title">Gambling</div>
+      <div class="note-body">You're in Vegas — if you want to gamble, go for it. Set a limit before you walk onto the floor and <strong>do not go over it</strong>. The casino always wins. It's more fun when you treat it like entertainment, not a strategy.</div>
+    </div>
+    <div class="note-card pink">
+      <div class="note-icon">💧</div>
+      <div class="note-title">Drink Smart</div>
+      <div class="note-body">Vegas is hot and dry. Hydrate between drinks. Alcohol hits different when you're dehydrated and on your feet all day. Pace yourself — especially Day 1, when you've got a full Saturday ahead.</div>
+    </div>
+    <div class="note-card" style="grid-column: 1 / -1;">
+      <div class="note-icon">📍</div>
+      <div class="note-title">Hotel Address</div>
+      <div class="note-body"><strong>Otonomus Hotel Las Vegas</strong> — 5050 W Russell Rd, Las Vegas, NV 89118. Save this to your maps now. It's about 10–15 min from the Strip — Ubers are cheap and easy.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">MANIFEST × VEGAS</div>
+  <div class="footer-sub" style="margin-bottom: 16px;">UCI Entrepreneurship Club &nbsp;•&nbsp; May 2025</div>
+  <div style="font-size: 13px; color: var(--muted); line-height: 1.8;">
+    Questions? Drop it in the group chat or text <strong style="color:var(--text)">(267) 885-9540</strong>.<br>
+    See you on the Strip. 🎰
+  </div>
+</div>
+
+</body>
+</html>
